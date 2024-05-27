@@ -88,11 +88,15 @@ a {
   background: #fff var(--switch-bg-url) no-repeat center;
   border: 0;
   border-radius: 50%;
+  animation: slide-out .2s;
 }
 
 .light .switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in .2s forwards;
+}
+
+.switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 .switch span {
@@ -186,5 +190,27 @@ footer {
 
   .light {
     --bg-url: url(./assets/bg-desktop-light.svg)
+  }
+}
+
+/* animations */
+
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-out {
+  from {
+    left: 50%;
+  }
+
+  to{
+      left: 0;
   }
 }
