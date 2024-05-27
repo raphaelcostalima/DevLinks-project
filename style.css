@@ -6,7 +6,7 @@
 
 :root {
   --text-color: #fff;
-  --bg-url: url(./assets/bg-desktop.svg);
+  --bg-url: url(./assets/bg-mobile.svg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -15,8 +15,8 @@
 }
 
 .light {
-  --text-color: #252525;
-  --bg-url: url(./assets/bg-desktop-light.svg);
+  --text-color: #000000;
+  --bg-url: url(./assets/bg-mobile-light.svg);
   --stroke-color: rgba(0, 0, 0, 0.5);
   --surface-color: rgba(0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0.02);
@@ -26,7 +26,8 @@
 
 body {
   /* Background: color, url(), repeat, position/size */
-  background: var(--bg-url) no-repeat top center;
+  background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -175,4 +176,15 @@ footer {
 
   font-size: 14px;
   padding: 24px 0;
+}
+
+/* de 700 pixels pra cima add as regras a seguir */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.svg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.svg):
+  }
 }
