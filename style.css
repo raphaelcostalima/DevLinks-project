@@ -185,6 +185,6 @@ footer {
   }
 
   .light {
-    --bg-url: url(./assets/bg-desktop-light.svg):
+    --bg-url: url(./assets/bg-desktop-light.svg)
   }
 }
